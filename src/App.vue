@@ -8,6 +8,7 @@ import MainTodo from './components/MainTodo.vue';
   <div class="wrap">
     <TheHeader />
     <main class="main"><MainTodo /></main>
+    <!-- <main class="main"><router-view /></main> -->
     <TheFooter />
   </div>
 </template>
