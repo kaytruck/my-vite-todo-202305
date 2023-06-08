@@ -1,8 +1,8 @@
 <script setup>
-import { onMounted, onUpdated, ref } from 'vue';
+import { ref } from 'vue';
 import { useTodoList } from '/src/composables/useTodoList.js';
 import BaseButton from '/src/components/BaseButton.vue';
-import ButtonAdd from './ButtonAdd.vue';
+import ButtonAdd from '/src/components/ButtonAdd.vue';
 
 const todoRef = ref('abc');
 // const todoListRef = ref([]);
@@ -32,12 +32,6 @@ const deleteTodo = (id) => {
 const changeCheck = (id) => {
   check(id);
 };
-
-onMounted(() => {});
-
-onUpdated(() => {
-  console.log('onUpdated: ', todoRef.value);
-});
 </script>
 
 <template>
