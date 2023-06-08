@@ -4,7 +4,7 @@ import { useTodoList } from '/src/composables/useTodoList.js';
 import BaseButton from '/src/components/BaseButton.vue';
 import ButtonAdd from '/src/components/ButtonAdd.vue';
 
-const todoRef = ref('abc');
+const todoRef = ref();
 // const todoListRef = ref([]);
 const isEditRef = ref(false);
 const { todoListRef, add, show, edit, del, check, countFin } = useTodoList();

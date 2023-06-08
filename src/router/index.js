@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import MainTodo from '/src/pages/MainTodo.vue';
-import About from '/src/pages/About.vue';
+import NotFound from '/src/pages/NotFound.vue';
+import Blog from '/src/pages/Blog.vue';
 
 const routes = [
   {
@@ -16,7 +17,17 @@ const routes = [
   {
     path: '/about',
     name: 'About',
-    component: About,
+    component: () => import('/src/pages/About.vue'),
+  },
+  {
+    path: '/blog',
+    name: 'blog',
+    component: Blog,
+  },
+  {
+    path: '/:pathMath(.*)*',
+    name: 'NotFound',
+    component: NotFound,
   },
 ];
 
